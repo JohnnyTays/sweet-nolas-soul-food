@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Nola's Soul Food | Soul Food Catering in Tempe, AZ</title>
+  <meta name="description" content="Authentic Southern soul food catering serving Tempe, Phoenix, Mesa, Chandler & the entire Valley. New Orleans roots. Made from scratch. Book your event today.">
+  <meta name="keywords" content="soul food catering Tempe AZ, Phoenix soul food catering, Southern catering Arizona, Black-owned catering Phoenix">
+  <meta property="og:title" content="Sweet Nola's Soul Food | Soul Food Catering in Tempe, AZ">
+  <meta property="og:description" content="Authentic Southern Soul Food Catering rooted in New Orleans, Arkansas & Alabama — now serving the Valley.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --burgundy: #3D0C11;
+      --orange: #C4622D;
+      --gold: #C9943A;
+      --cream: #FDF6EC;
+      --espresso: #1A0A05;
+      --charcoal: #2C1A0E;
+      --warm-cream: #F5E6D0;
+      --tan: #A07850;
+      --parchment: #FFF8F0;
+      --amber: #D4A55A;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; background: var(--cream); color: var(--charcoal); line-height: 1.6; }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
+    a { color: var(--gold); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--orange); }
+    img { max-width: 100%; height: auto; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: var(--burgundy);
+      padding: 0.9rem 2rem;
+      z-index: 1000;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 2px solid var(--gold);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;
+      color: var(--gold); display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-logo svg { width: 28px; height: 28px; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--warm-cream); font-size: 0.95rem; font-weight: 400; letter-spacing: 0.3px; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--orange); color: var(--warm-cream) !important;
+      padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 700 !important;
+      text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px;
+    }
+    .nav-cta:hover { background: #b5551f !important; color: var(--warm-cream) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 25px; height: 2px; background: var(--warm-cream); transition: 0.3s; }
+    @media (max-width: 768px) {
+      nav { padding: 0.8rem 1rem; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--burgundy); flex-direction: column; padding: 1rem; gap: 1rem; border-top: 1px solid var(--gold); }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 7rem 2rem 4rem; text-align: center;
+      background: linear-gradient(rgba(61,12,17,0.72), rgba(61,12,17,0.72)),
+        url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1600&q=80') center/cover no-repeat;
+      position: relative;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
+    .hero-ornament { color: var(--gold); font-size: 1.5rem; margin-bottom: 1.5rem; letter-spacing: 8px; }
+    .hero h1 { font-size: clamp(2.8rem, 7vw, 5rem); color: var(--warm-cream); line-height: 1.1; margin-bottom: 0.5rem; }
+    .hero-tagline { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--gold); font-style: italic; margin-bottom: 1rem; }
+    .hero-sub { color: var(--warm-cream); font-size: 1rem; margin-bottom: 2rem; opacity: 0.9; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+    .btn-primary { background: var(--orange); color: var(--warm-cream); padding: 0.9rem 2.2rem; font-weight: 700; font-size: 1rem; border-radius: 6px; border: 2px solid var(--orange); display: inline-block; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s; }
+    .btn-primary:hover { background: transparent; color: var(--orange); }
+    .btn-outline { background: transparent; color: var(--gold); padding: 0.9rem 2.2rem; font-weight: 700; font-size: 1rem; border-radius: 6px; border: 2px solid var(--gold); display: inline-block; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s; }
+    .btn-outline:hover { background: var(--gold); color: var(--espresso); }
+    .trust-bar { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; color: var(--warm-cream); font-size: 0.9rem; opacity: 0.85; }
+    .trust-bar span { display: flex; align-items: center; gap: 0.4rem; }
+
+    /* SECTIONS */
+    .section-label { text-align: center; font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .section-title { text-align: center; font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.75rem; }
+    .section-subtitle { text-align: center; color: var(--tan); margin-bottom: 3rem; font-size: 1.05rem; }
+
+    /* ABOUT */
+    .about { padding: 5rem 2rem; background: var(--cream); }
+    .about-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
+    .about-image img { width: 100%; height: 480px; object-fit: cover; border-radius: 8px; border: 3px solid var(--gold); box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+    .about-text h2 { color: var(--burgundy); font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 1.5rem; line-height: 1.2; }
+    .about-text p { color: var(--charcoal); font-size: 1.05rem; line-height: 1.85; margin-bottom: 1rem; }
+    .about-divider { width: 60px; height: 2px; background: var(--gold); margin: 2rem 0; }
+    .about-badges { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .badge { background: var(--parchment); border: 2px solid var(--gold); padding: 0.7rem 1.2rem; border-radius: 50px; font-size: 0.9rem; color: var(--burgundy); font-weight: 600; display: flex; align-items: center; gap: 0.4rem; }
+    @media (max-width: 768px) { .about-content { grid-template-columns: 1fr; gap: 2rem; } .about-image img { height: 320px; } }
+
+    /* HOW IT WORKS */
+    .how { padding: 5rem 2rem; background: var(--espresso); color: var(--warm-cream); }
+    .how .section-title { color: var(--warm-cream); }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+    .step-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,148,58,0.3); border-radius: 8px; padding: 2.5rem 2rem; text-align: center; transition: border-color 0.3s; }
+    .step-card:hover { border-color: var(--gold); }
+    .step-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .step-card h3 { color: var(--gold); font-size: 1.3rem; margin-bottom: 0.75rem; }
+    .step-card p { color: var(--warm-cream); opacity: 0.85; font-size: 0.95rem; line-height: 1.7; }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--burgundy); font-weight: 700; opacity: 0.6; position: absolute; top: -10px; right: 20px; }
+    .step-card { position: relative; }
+    .how-disclaimer { text-align: center; color: var(--gold); font-size: 0.85rem; margin-top: 2.5rem; font-style: italic; }
+    @media (max-width: 768px) { .steps-grid { grid-template-columns: 1fr; } }
+
+    /* MENU */
+    .menu { padding: 5rem 2rem; background: var(--cream); }
+    .menu-intro { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+    .menu-intro h2 { color: var(--burgundy); }
+    .menu-category { margin-bottom: 3.5rem; }
+    .menu-category-title { font-size: 1.5rem; color: var(--burgundy); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .menu-table-wrap { overflow-x: auto; }
+    .menu-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+    .menu-table th { text-align: left; padding: 0.8rem 1rem; background: var(--burgundy); color: var(--warm-cream); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .menu-table th:last-child, .menu-table td:last-child { text-align: right; }
+    .menu-table td { padding: 0.9rem 1rem; border-bottom: 1px solid rgba(201,148,58,0.2); vertical-align: top; }
+    .menu-table tr:last-child td { border-bottom: none; }
+    .menu-item-name { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; color: var(--charcoal); }
+    .menu-item-name.signature { color: var(--orange); font-weight: 600; }
+    .menu-desc { color: var(--tan); font-size: 0.9rem; margin-top: 0.2rem; }
+    .menu-price { font-weight: 700; color: var(--burgundy); white-space: nowrap; }
+    .menu-note { font-size: 0.85rem; color: var(--tan); margin-top: 0.5rem; font-style: italic; }
+
+    /* PACKAGES */
+    .packages { padding: 4rem 2rem; background: var(--parchment); border-top: 2px solid var(--amber); border-bottom: 2px solid var(--amber); }
+    .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+    .pkg-card { background: white; border: 2px solid var(--amber); border-radius: 8px; padding: 2rem; text-align: center; transition: transform 0.3s; }
+    .pkg-card.popular { border-color: var(--gold); border-width: 3px; transform: scale(1.03); position: relative; }
+    .pkg-badge { background: var(--gold); color: white; font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 0.8rem; }
+    .pkg-card h3 { font-size: 1.4rem; color: var(--burgundy); margin-bottom: 0.3rem; }
+    .pkg-guests { color: var(--tan); font-size: 0.9rem; margin-bottom: 1rem; }
+    .pkg-desc { color: var(--charcoal); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.2rem; }
+    .pkg-price { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--orange); font-weight: 700; }
+    .pkg-note { font-size: 0.8rem; color: var(--tan); margin-top: 0.8rem; }
+    @media (max-width: 768px) { .packages-grid { grid-template-columns: 1fr; } .pkg-card.popular { transform: none; } }
+
+    /* TESTIMONIALS */
+    .testimonials { padding: 5rem 2rem; background: var(--burgundy); }
+    .testimonials .section-title { color: var(--warm-cream); }
+    .testimonials .section-label { color: var(--gold); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto; }
+    .testi-card { background: rgba(255,255,255,0.07); border: 2px solid var(--gold); border-radius: 8px; padding: 2rem; position: relative; }
+    .testi-quote { font-size: 4rem; color: var(--gold); font-family: 'Playfair Display', serif; line-height: 1; position: absolute; top: 10px; left: 15px; opacity: 0.5; }
+    .testi-card p { color: var(--warm-cream); font-size: 0.95rem; line-height: 1.8; font-style: italic; margin-bottom: 1rem; padding-top: 1.5rem; }
+    .testi-card cite { color: var(--gold); font-size: 0.9rem; font-style: normal; font-weight: 600; }
+    @media (max-width: 768px) { .testi-grid { grid-template-columns: 1fr; } }
+
+    /* GALLERY */
+    .gallery { padding: 5rem 2rem; background: var(--cream); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 1000px; margin: 0 auto; }
+    .gallery-item { border-radius: 8px; overflow: hidden; border: 2px solid var(--amber); aspect-ratio: 4/3; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    @media (max-width: 600px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* SERVICE AREA */
+    .service-area { padding: 5rem 2rem; background: var(--espresso); color: var(--warm-cream); }
+    .service-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .service-text p { color: var(--warm-cream); opacity: 0.88; line-height: 1.85; margin-bottom: 1rem; font-size: 1.05rem; }
+    .service-text .delivery-note { background: rgba(201,148,58,0.15); border: 1px solid var(--gold); border-radius: 6px; padding: 1rem; margin-top: 1.5rem; font-size: 0.9rem; }
+    .service-text .delivery-note p { margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .city-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .city-tag { background: rgba(201,148,58,0.2); border: 1px solid var(--gold); color: var(--gold); padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.88rem; font-weight: 600; }
+    @media (max-width: 768px) { .service-content { grid-template-columns: 1fr; gap: 2rem; } }
+
+    /* CONTACT */
+    .contact { padding: 5rem 2rem; background: var(--cream); }
+    .contact-header { max-width: 600px; margin: 0 auto 3rem; text-align: center; }
+    .contact-header h2 { color: var(--burgundy); }
+    .contact-header p { color: var(--tan); margin-top: 0.75rem; }
+    .booking-form { max-width: 640px; margin: 0 auto; background: var(--parchment); padding: 2.5rem; border-radius: 8px; border: 2px solid var(--amber); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-weight: 600; font-size: 0.9rem; color: var(--charcoal); margin-bottom: 0.4rem; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 0.85rem 1rem; background: white; border: 1px solid var(--amber);
+      border-radius: 4px; color: var(--charcoal); font-family: 'Lato', sans-serif; font-size: 1rem;
+      outline: none; transition: border-color 0.3s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--orange); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .radio-group { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .radio-group label { display: flex; align-items: center; gap: 0.4rem; font-weight: 400; cursor: pointer; }
+    .submit-btn { width: 100%; background: var(--orange); color: var(--warm-cream); padding: 1rem; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; border: none; border-radius: 4px; cursor: pointer; margin-top: 0.5rem; transition: background 0.3s; }
+    .submit-btn:hover { background: #b5551f; }
+    .form-disclaimer { font-size: 0.8rem; color: var(--tan); margin-top: 1rem; text-align: center; line-height: 1.6; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+    /* FOOTER */
+    footer { padding: 3rem 2rem 1.5rem; background: var(--espresso); }
+    .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--amber); }
+    .footer-brand .nav-logo { margin-bottom: 0.75rem; font-size: 1.6rem; }
+    .footer-brand p { color: var(--warm-cream); opacity: 0.7; font-size: 0.9rem; font-style: italic; margin-bottom: 0.5rem; }
+    .footer-brand .location { color: var(--tan); font-size: 0.85rem; }
+    .footer-col h4 { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+    .footer-col ul li a { color: var(--warm-cream); opacity: 0.75; font-size: 0.9rem; }
+    .footer-col ul li a:hover { opacity: 1; color: var(--gold); }
+    .footer-col p { color: var(--warm-cream); opacity: 0.7; font-size: 0.9rem; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
+    .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+    .social-links a { color: var(--gold); font-size: 1.4rem; transition: transform 0.3s; display: inline-block; }
+    .social-links a:hover { transform: scale(1.2); }
+    .footer-bottom { max-width: 1100px; margin: 1.5rem auto 0; text-align: center; color: var(--tan); font-size: 0.82rem; }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+    /* FLOATING */
+    .floating-btns { position: fixed; bottom: 20px; right: 20px; z-index: 999; display: flex; flex-direction: column; gap: 10px; }
+    .whatsapp-btn { background: #25D366; color: white; width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.3s; }
+    .whatsapp-btn:hover { transform: scale(1.1); }
+    .back-to-top { background: var(--burgundy); color: var(--gold); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3); cursor: pointer; border: none; transition: all 0.3s; opacity: 0; pointer-events: none; }
+    .back-to-top.show { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { background: var(--gold); color: var(--espresso); }
+    .mobile-book-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998; }
+    @media (max-width: 768px) {
+      .mobile-book-bar { display: block; }
+      .floating-btns { bottom: 70px; }
+      body { padding-bottom: 60px; }
+    }
+    .mobile-book-btn { width: 100%; background: var(--orange); color: var(--warm-cream); padding: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: none; cursor: pointer; font-size: 1rem; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#C9943A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+      <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+      <line x1="6" y1="1" x2="6" y2="4"/>
+      <line x1="10" y1="1" x2="10" y2="4"/>
+      <line x1="14" y1="1" x2="14" y2="4"/>
+    </svg>
+    Sweet Nola's
+  </div>
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Nola</a></li>
+    <li><a href="#menu">Our Menu</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact" class="nav-cta">Book Your Event</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-ornament">❧ ❧ ❧</div>
+    <h1>Sweet Nola's Soul Food</h1>
+    <p class="hero-tagline">Cooked with roots. Served with love.</p>
+    <p class="hero-sub">Authentic Southern Catering rooted in New Orleans, Arkansas & Alabama — now bringing that same love to the Valley.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Book Your Event</a>
+      <a href="#menu" class="btn-outline">View Our Menu</a>
+    </div>
+    <div class="trust-bar">
+      <span>🍽️ Full-Pan Catering</span>
+      <span>📍 Tempe, AZ & Surrounding Areas</span>
+      <span>💰 50% Deposit Secures Your Date</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-content">
+    <div class="about-image">
+      <img src="nola-portrait.jpg" alt="Nola - Sweet Nola's Soul Food">
+    </div>
+    <div class="about-text">
+      <p class="section-label">About the Cook</p>
+      <h2>"This Food Has a Story. And It Starts at the Table."</h2>
+      <p>Every dish we make carries three generations of tradition — from the bayous of New Orleans, the kitchens of Arkansas, and the Sunday suppers of Alabama.</p>
+      <p>Sweet Nola's was built on a simple belief: real food takes real time, real ingredients, and real love. Nothing here comes from a box. Nothing here gets rushed. And nothing leaves our kitchen unless it's right.</p>
+      <p>Whether you're planning a family reunion, a birthday celebration, a repast, a corporate lunch, or any gathering where people matter — we bring the food that brings people together.</p>
+      <p><em>Welcome to Sweet Nola's. Pull up a chair.</em></p>
+      <div class="about-divider"></div>
+      <div class="about-badges">
+        <div class="badge">🌿 Made from Scratch</div>
+        <div class="badge">🍯 New Orleans Roots</div>
+        <div class="badge">❤️ Cooked with Love</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <p class="section-label">How It Works</p>
+  <h2 class="section-title">Booking Sweet Nola's Is As Easy As 1-2-3</h2>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-icon">📋</div>
+      <h3>1. Contact Us</h3>
+      <p>Fill out our booking form below or call/text us directly. Tell us your event date, guest count, and what you're hungry for.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-icon">💳</div>
+      <h3>2. Pay Your Deposit</h3>
+      <p>A 50% deposit secures your date on the Sweet Nola's calendar. No deposit, no date — it's that simple. This protects your event and lets us go shopping for the freshest ingredients.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-icon">🍽️</div>
+      <h3>3. We Show Up & Show Out</h3>
+      <p>The day of your event, we arrive with everything ready. Hot food, real flavors, and the kind of spread your guests won't stop talking about. Balance is due on delivery.</p>
+    </div>
+  </div>
+  <p class="how-disclaimer">All deposits are non-refundable. Full payment is due on the day of your event. Events booked within 7 days of the date require full payment upfront.</p>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <p class="section-label">The Menu</p>
+  <div class="menu-intro">
+    <h2 class="section-title">Real Southern Food. Nothing Held Back.</h2>
+    <p class="section-subtitle">All items available by the Half Pan (feeds 12–15) or Full Pan (feeds 25–30)</p>
+  </div>
+
+  <div class="menu-category">
+    <h3 class="menu-category-title">🍗 Entrees</h3>
+    <div class="menu-table-wrap">
+      <table class="menu-table">
+        <thead><tr><th>Item</th><th>Description</th><th>Half Pan</th><th>Full Pan</th></tr></thead>
+        <tbody>
+          <tr><td><span class="menu-item-name">Southern Fried Chicken</span></td><td class="menu-desc">Seasoned to the bone, fried golden and crispy the way Grandma intended</td><td class="menu-price">$65</td><td class="menu-price">$120</td></tr>
+          <tr><td><span class="menu-item-name">Smothered Pork Chops</span></td><td class="menu-desc">Slow-cooked in a savory onion gravy that'll make you forget every other pork chop you've had</td><td class="menu-price">$70</td><td class="menu-price">$130</td></tr>
+          <tr><td><span class="menu-item-name">Fried Catfish</span></td><td class="menu-desc">Gulf-style catfish, perfectly seasoned and fried fresh — a Southern staple done right</td><td class="menu-price">$75</td><td class="menu-price">$140</td></tr>
+          <tr><td><span class="menu-item-name">Red Beans & Rice w/ Smoked Sausage</span></td><td class="menu-desc">Straight out of New Orleans. Slow-simmered red beans with smoky sausage over white rice</td><td class="menu-price">$55</td><td class="menu-price">$100</td></tr>
+          <tr><td><span class="menu-item-name">BBQ Baked Chicken</span></td><td class="menu-desc">Tender, fall-off-the-bone chicken slow-baked in sweet smoky BBQ — crowd-pleasing every time</td><td class="menu-price">$60</td><td class="menu-price">$110</td></tr>
+          <tr><td><span class="menu-item-name">Smothered Turkey Wings</span></td><td class="menu-desc">Rich, savory, and slow-cooked until they melt. This one sells out first — order early</td><td class="menu-price">$75</td><td class="menu-price">$140</td></tr>
+          <tr><td><span class="menu-item-name signature">✨ Oxtails — SIGNATURE</span></td><td class="menu-desc">Four hours of love in every bite. Our most requested dish — rich, braised, and unforgettable</td><td class="menu-price">$95</td><td class="menu-price">$180</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="menu-category">
+    <h3 class="menu-category-title">🥘 Sides</h3>
+    <div class="menu-table-wrap">
+      <table class="menu-table">
+        <thead><tr><th>Item</th><th>Description</th><th>Half Pan</th><th>Full Pan</th></tr></thead>
+        <tbody>
+          <tr><td><span class="menu-item-name">Homemade Mac & Cheese</span></td><td class="menu-desc">Real cheese. Real butter. Baked until it's golden on top and creamy all the way through</td><td class="menu-price">$45</td><td class="menu-price">$85</td></tr>
+          <tr><td><span class="menu-item-name">Collard Greens w/ Smoked Turkey</span></td><td class="menu-desc">Low and slow, seasoned deep, cooked with smoked turkey for that authentic Southern flavor</td><td class="menu-price">$40</td><td class="menu-price">$75</td></tr>
+          <tr><td><span class="menu-item-name">Cornbread Dressing</span></td><td class="menu-desc">An Arkansas tradition. Savory, moist, and made completely from scratch — not stuffing</td><td class="menu-price">$40</td><td class="menu-price">$75</td></tr>
+          <tr><td><span class="menu-item-name">Candied Yams</span></td><td class="menu-desc">Sweet potato perfection — buttery, spiced, and caramelized just right</td><td class="menu-price">$38</td><td class="menu-price">$70</td></tr>
+          <tr><td><span class="menu-item-name">Black-Eyed Peas</span></td><td class="menu-desc">A New Orleans staple, cooked slow with seasoning and love. Good luck in every bite</td><td class="menu-price">$38</td><td class="menu-price">$70</td></tr>
+          <tr><td><span class="menu-item-name">Dirty Rice</span></td><td class="menu-desc">Authentic Louisiana dirty rice — ground meat, holy trinity, spiced to perfection</td><td class="menu-price">$40</td><td class="menu-price">$75</td></tr>
+          <tr><td><span class="menu-item-name">Southern Potato Salad</span></td><td class="menu-desc">Mustard-based, Southern style. Creamy, tangy, and exactly what every event needs</td><td class="menu-price">$38</td><td class="menu-price">$70</td></tr>
+          <tr><td><span class="menu-item-name">Garlic Green Beans</span></td><td class="menu-desc">Tender green beans sautéed in garlic butter — the lighter option that still hits</td><td class="menu-price">$35</td><td class="menu-price">$65</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="menu-category">
+    <h3 class="menu-category-title">🎂 Desserts</h3>
+    <div class="menu-table-wrap">
+      <table class="menu-table">
+        <thead><tr><th>Item</th><th>Description</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td><span class="menu-item-name">Sweet Potato Pie</span></td><td class="menu-desc">The one everyone's been asking about. Homemade crust, smooth filling, pure soul</td><td class="menu-price">$45 (1 pie) · $85 (2 pies)</td></tr>
+          <tr><td><span class="menu-item-name">Peach Cobbler</span></td><td class="menu-desc">Warm, golden, and made with real peaches. Sweet Nola's most talked-about dessert</td><td class="menu-price">$50 half pan · $95 full pan</td></tr>
+          <tr><td><span class="menu-item-name">Bread Pudding w/ Vanilla Sauce</span></td><td class="menu-desc">Straight from New Orleans — rich bread pudding drizzled with homemade vanilla sauce</td><td class="menu-price">$50 half pan · $90 full pan</td></tr>
+          <tr><td><span class="menu-item-name">Banana Pudding</span></td><td class="menu-desc">Layered, creamy, and absolutely irresistible. Nobody ever leaves without seconds</td><td class="menu-price">$45 half pan · $80 full pan</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="menu-category">
+    <h3 class="menu-category-title">🍹 Drinks — Sweet Nola's Originals</h3>
+    <div class="menu-table-wrap">
+      <table class="menu-table">
+        <thead><tr><th>Item</th><th>Description</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td><span class="menu-item-name">Sweet Nola's Original Sweet Tea</span></td><td class="menu-desc">Handmade, Southern-brewed sweet tea. The one people ask for by name</td><td class="menu-price">$35/gallon</td></tr>
+          <tr><td><span class="menu-item-name">Peach Sweet Tea</span></td><td class="menu-desc">Classic sweet tea kissed with peach — a Southern summer in a cup</td><td class="menu-price">$40/gallon</td></tr>
+          <tr><td><span class="menu-item-name">Strawberry Lemonade</span></td><td class="menu-desc">Fresh-squeezed, handmade, and perfectly balanced. Arizona summer in a glass</td><td class="menu-price">$40/gallon</td></tr>
+          <tr><td><span class="menu-item-name">Fresh Fruit Punch</span></td><td class="menu-desc">Sweet, bright, and family-friendly. Perfect for any gathering</td><td class="menu-price">$35/gallon</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="menu-note">* Cups available upon request — add $5 per gallon</p>
+  </div>
+
+  <!-- PACKAGES -->
+  <div class="packages">
+    <p class="section-label" style="margin-bottom:1rem;">Catering Packages</p>
+    <h2 class="section-title" style="color:var(--burgundy);margin-bottom:2.5rem;">Built for Every Size Gathering</h2>
+    <div class="packages-grid">
+      <div class="pkg-card">
+        <h3>The Gathering</h3>
+        <p class="pkg-guests">Up to 25 Guests</p>
+        <p class="pkg-desc">1 Entree Full Pan · 3 Sides Full Pan · 1 Dessert · 1 Gallon Sweet Tea</p>
+        <div class="pkg-price">$395</div>
+        <p class="pkg-note">All packages include serving utensils</p>
+      </div>
+      <div class="pkg-card popular">
+        <span class="pkg-badge">⭐ Most Popular</span>
+        <h3>The Celebration</h3>
+        <p class="pkg-guests">Up to 50 Guests</p>
+        <p class="pkg-desc">2 Entrees Full Pan · 4 Sides Full Pan · 2 Desserts · 2 Gallons Drink</p>
+        <div class="pkg-price">$750</div>
+        <p class="pkg-note">All packages include serving utensils</p>
+      </div>
+      <div class="pkg-card">
+        <h3>The Sweet Nola Experience</h3>
+        <p class="pkg-guests">Up to 100 Guests</p>
+        <p class="pkg-desc">3 Entrees Full Pan · 5 Sides Full Pan · 3 Desserts · 3 Gallons Drink</p>
+        <div class="pkg-price">$1,150</div>
+        <p class="pkg-note">Disposable plates/ware available for $2.50/person</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:2rem;color:var(--tan);font-size:0.9rem;">Custom menus available — <a href="#contact" style="color:var(--orange);">contact us</a> to build your perfect spread.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <p class="section-label">What People Are Saying</p>
+  <h2 class="section-title">Don't Take Our Word for It</h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p>We hired Sweet Nola's for my mother's repast and I cannot tell you how many people pulled me aside to ask who cooked the food. Every single pan was gone. The oxtails were out of this world.</p>
+      <cite>— Tamika R., Phoenix AZ</cite>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p>The mac and cheese alone is worth every penny. We've used Sweet Nola's for three events now and will never go anywhere else. She shows up on time, the food is always hot, and it tastes like home.</p>
+      <cite>— Darnell & Keisha W., Mesa AZ</cite>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p>That peach cobbler needs its own award. We ordered catering for our company luncheon and our CEO asked for the contact info. She's now our go-to for every office event.</p>
+      <cite>— Marcus T., Tempe AZ</cite>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <p class="section-label">The Spread</p>
+  <h2 class="section-title" style="color:var(--burgundy);">A Feast for the Eyes First</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80" alt="Soul food spread"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Fried chicken"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&q=80" alt="Mac and cheese"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1571506165871-ee72a35bc9d4?w=600&q=80" alt="Peach cobbler"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Catering setup"></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Southern sides"></div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="service-area">
+  <div class="service-content">
+    <div class="service-text">
+      <p class="section-label">Where We Serve</p>
+      <h2 class="section-title" style="color:var(--warm-cream);">Based in Tempe. Bringing Soul to the Whole Valley.</h2>
+      <p>Sweet Nola's is based in Tempe, AZ (85282) and proudly serves the entire Phoenix Metropolitan Area. Whether you're in Scottsdale, Mesa, Chandler, Gilbert, Glendale, Peoria, or downtown Phoenix — we deliver.</p>
+      <p>Can't wait? Pickup is available by arrangement from anywhere.</p>
+      <div class="delivery-note">
+        <p>🍽️ Delivery within 30 miles — <strong>Included</strong></p>
+        <p>📦 Delivery 30–50 miles — <strong>Small fee applies</strong></p>
+        <p>🚚 Beyond 50 miles — <strong>Contact us for pricing</strong></p>
+      </div>
+    </div>
+    <div>
+      <p style="color:var(--gold);font-weight:600;margin-bottom:1.2rem;font-size:1.05rem;">Cities We Serve:</p>
+      <div class="city-grid">
+        <span class="city-tag">Tempe</span><span class="city-tag">Phoenix</span><span class="city-tag">Mesa</span>
+        <span class="city-tag">Chandler</span><span class="city-tag">Gilbert</span><span class="city-tag">Scottsdale</span>
+        <span class="city-tag">Glendale</span><span class="city-tag">Peoria</span><span class="city-tag">Avondale</span>
+        <span class="city-tag">Surprise</span><span class="city-tag">Queen Creek</span><span class="city-tag">Apache Junction</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-header">
+    <p class="section-label">Book Your Event</p>
+    <h2 class="section-title" style="color:var(--burgundy);">Let's Make Something Delicious Together</h2>
+    <p>Fill out the form below and we'll get back to you within 24 hours to confirm your event and collect your deposit.</p>
+  </div>
+  <form class="booking-form" action="https://formsubmit.co/darneshapickett@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Booking Request — Sweet Nola's Soul Food">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <div class="form-row">
+      <div class="form-group"><label>Full Name *</label><input type="text" name="full_name" required></div>
+      <div class="form-group"><label>Phone Number *</label><input type="tel" name="phone" required></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Email Address *</label><input type="email" name="email" required></div>
+      <div class="form-group"><label>Event Date *</label><input type="date" name="event_date" required></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Event Type *</label>
+        <select name="event_type" required>
+          <option value="">Select event type...</option>
+          <option>Birthday Party</option>
+          <option>Family Reunion</option>
+          <option>Repast</option>
+          <option>Wedding</option>
+          <option>Corporate Event</option>
+          <option>Baby/Bridal Shower</option>
+          <option>Church Event</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Estimated Guest Count *</label><input type="number" name="guest_count" min="1" required></div>
+    </div>
+    <div class="form-group">
+      <label>Delivery or Pickup? *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="delivery" value="Delivery" required> Delivery</label>
+        <label><input type="radio" name="delivery" value="Pickup"> Pickup</label>
+        <label><input type="radio" name="delivery" value="Not Sure"> Not Sure Yet</label>
+      </div>
+    </div>
+    <div class="form-group"><label>City / Zip Code of Event *</label><input type="text" name="event_location" required></div>
+    <div class="form-group"><label>Items You're Interested In</label><textarea name="items_interested" placeholder="Tell us what dishes you're thinking about or ask us to build your menu..."></textarea></div>
+    <div class="form-group">
+      <label>How Did You Hear About Us?</label>
+      <select name="referral">
+        <option value="">Select...</option>
+        <option>Word of Mouth</option>
+        <option>Social Media</option>
+        <option>Google</option>
+        <option>Referral</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <button type="submit" class="submit-btn">Send My Booking Request</button>
+    <p class="form-disclaimer">By submitting this form you are not yet confirmed. A member of the Sweet Nola's team will contact you within 24 hours. A 50% non-refundable deposit is required to hold your date.</p>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">Sweet Nola's</div>
+      <p>Cooked with roots. Served with love.</p>
+      <p class="location">📍 Tempe, AZ | Serving the Valley</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="TikTok">🎵</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Nola</a></li>
+        <li><a href="#menu">Our Menu</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#contact">Book Your Event</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📞 (480) 555-0123</p>
+      <p>📧 darneshapickett@gmail.com</p>
+      <p>📍 Tempe, AZ 85282</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Sweet Nola's Soul Food. All Rights Reserved. | Serving the Phoenix Valley with Love.</p>
+  </div>
+</footer>
+
+<!-- FLOATING -->
+<div class="floating-btns">
+  <a href="https://wa.me/14805550123" class="whatsapp-btn" target="_blank" aria-label="Message us on WhatsApp">💬</a>
+  <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+</div>
+<div class="mobile-book-bar">
+  <a href="#contact" class="mobile-book-btn">📅 Book Your Event</a>
+</div>
+
+<script>
+  // Back to top visibility
+  window.addEventListener('scroll', () => {
+    document.querySelector('.back-to-top').classList.toggle('show', window.scrollY > 500);
+  });
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      document.querySelector('.nav-links')?.classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
